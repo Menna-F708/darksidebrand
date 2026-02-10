@@ -1,33 +1,32 @@
-// Intro Video + Logo Reveal
+// ================= Intro Video + Explore Zoom =================
 const intro = document.querySelector(".intro");
 const site = document.getElementById("site");
 const playBtn = document.getElementById("playVideoBtn");
 const video = document.getElementById("introVideo");
 
+video.play();
+video.loop = true; 
+video.muted = true; 
+
 playBtn.addEventListener("click", () => {
-  playBtn.style.display = "none";
-  video.style.opacity = "1";
-  video.play();
+  playBtn.style.display = "none"; 
 
-  // بعد 0.5 ثانية: زووم + حركة لفوق
-  setTimeout(() => {
-    video.classList.add("zoom-move");
-  }, 500);
+  video.classList.add("zoom-move");
 
-  // بعد 3.5 ثانية: الفيديو يختفي
-  setTimeout(() => {
-    video.style.opacity = "0";
-  }, 3500);
-
-  // بعد 4.3 ثانية: ندخل على الصفحة الرئيسية
   setTimeout(() => {
     intro.style.display = "none";
     site.style.display = "block";
     document.body.style.overflow = "auto";
-  }, 4300);
+
+    site.style.opacity = "0";
+    setTimeout(() => {
+      site.style.transition = "opacity 1s ease";
+      site.style.opacity = "1";
+    }, 50);
+  }, 2000); 
 });
 
-
+// ================= Navbar Hamburger Toggle =================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -48,7 +47,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
+// ================= Buy Button Animation =================
 const buyBtns = document.querySelectorAll(".buy-btn");
 buyBtns.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -69,6 +68,7 @@ buyBtns.forEach(btn => {
   });
 });
 
+// ================= Slider =================
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 let currentIndex = 0;
