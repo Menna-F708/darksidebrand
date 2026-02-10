@@ -1,37 +1,30 @@
 // Intro Video + Logo Reveal
 const intro = document.querySelector(".intro");
-const logoReveal = document.querySelector(".logo-reveal");
 const site = document.getElementById("site");
 const playBtn = document.getElementById("playVideoBtn");
 const video = document.getElementById("introVideo");
 
 playBtn.addEventListener("click", () => {
-  video.style.opacity = "1";  
-  video.style.transform = "scale(1)"; 
-  video.play().catch(err => console.log(err));
   playBtn.style.display = "none";
+  video.style.opacity = "1";
+  video.play();
 
+  // بعد 0.5 ثانية: زووم + حركة لفوق
   setTimeout(() => {
-    video.style.transform = "scale(5)";
-  }, 1000); 
+    video.classList.add("zoom-move");
+  }, 500);
 
-  video.addEventListener("ended", () => {
-    intro.style.transition = "opacity 0.8s ease";
-    intro.style.opacity = 0;
-    setTimeout(() => {
-      intro.style.display = "none";
-      logoReveal.classList.add("active");
+  // بعد 3.5 ثانية: الفيديو يختفي
+  setTimeout(() => {
+    video.style.opacity = "0";
+  }, 3500);
 
-      setTimeout(() => {
-        logoReveal.style.opacity = 0;
-        setTimeout(() => {
-          logoReveal.style.display = "none";
-          site.style.display = "block";
-          document.body.style.overflow = "auto";
-        },1000);
-      },2000);
-    },500);
-  });
+  // بعد 4.3 ثانية: ندخل على الصفحة الرئيسية
+  setTimeout(() => {
+    intro.style.display = "none";
+    site.style.display = "block";
+    document.body.style.overflow = "auto";
+  }, 4300);
 });
 
 
