@@ -219,6 +219,7 @@ body {
   margin: 1rem auto;
   overflow: hidden;
   border-radius: 16px;
+  position: relative;
 }
 
 .slides {
@@ -235,14 +236,13 @@ body {
 }
 .dots {
   position: absolute;
-  bottom: 350px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
   z-index: 10;
 }
-
 .dot {
   width: 10px;
   height: 10px;
@@ -303,6 +303,7 @@ body {
 }
 
 .card-content p {
+  font-size: 0.8rem;
   margin: 0.8rem 0;
   color: #555;
 }
