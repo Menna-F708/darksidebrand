@@ -25,7 +25,7 @@ playBtn.addEventListener("click", () => {
     }, 50);
   }, 2000); 
 });
-
+  
 // ================= Navbar Hamburger Toggle =================
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");

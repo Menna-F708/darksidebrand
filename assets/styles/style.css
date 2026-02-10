@@ -35,32 +35,27 @@ body {
 }
 
 .intro video.zoom-move {
-  transform: scale(15) translateY(30%); 
-  transition: transform 3s ease; 
+  transform: scale(15) translateY(10%);
+  transition: transform 3s ease;
   opacity: 1;
 }
 
 #playVideoBtn {
   position: absolute;
-  bottom: 50%;
+  bottom: 20%;
   padding: 0.8rem 1.5rem;
-  font-size: 1.2rem;
-  background: rgba(192, 0, 0, 0.096);
-  color: #ffffff7c;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
+  background: none;
   cursor: pointer;
   z-index: 10000;
   transition:
-    background 0.3s ease,
     opacity 0.3s ease;
   opacity: 0.8;
 }
 
-#playVideoBtn:hover {
-  background: rgba(255, 0, 0, 0.8);
-  opacity: 1;
-}
+
 
 .site {
   display: none;
@@ -81,27 +76,6 @@ body {
   }
 }
 
-/* Shine */
-.logo-wrap::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-.logo-reveal.active .logo-wrap::after {
-  animation: shine 1s ease forwards;
-  animation-delay: 1.2s;
-}
 
 /* ========== Site ========== */
 .site {
