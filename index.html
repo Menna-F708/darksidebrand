@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -16,6 +17,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+    </style>
   </head>
   <body>
     <!-- Intro Video -->
@@ -30,24 +34,35 @@
     </section>
 
     <div class="site" id="site">
+      <!-- Navbar -->
       <nav class="navbar">
-<img src="./assets/img/Logo 1.png"/>
-        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        <p>DS</p>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-brands fa-sistrix"></i>
 
-        <!-- Nav Links -->
+          <i class="fas fa-bars"></i>
+        </div>
+
         <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Collection</a></li>
-          <li><a href="#">Polices</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <div class="head-nav">
+            <img class="close-menu" src="./assets/img/reject (1).png" />
+            <p>DS</p>
+            <div class="cart-fixed">
+              <img class="cart-icon" src="./assets/img/shopping-bag (2).png" />
+              <div class="badge" id="cart-count">0</div>
+            </div>
 
-          <div class="icon-mobile">
-            <li class="nav-icon-mobile"><i class="fas fa-search"></i></li>
-            <li class="nav-icon-mobile">
-              <i class="fas fa-cart-shopping"></i>
-            </li>
+            <div class="cart-container" onclick="addProduct()">
+              <img class="cart-icon" src="./assets/img/shopping-bag (2).png" />
+
+              <div class="badge" id="cart-count">0</div>
+            </div>
           </div>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Polices</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
 
         <div class="nav-icons-desktop">
@@ -55,95 +70,174 @@
           <i class="fas fa-cart-shopping"></i>
         </div>
       </nav>
+      <!-- End Navbar -->
 
-      <!-- Slider -->
-      <section class="slider">
-        <div class="slides">
-          <div class="slide">
-            <img src="./assets/img/Minimalist Portrait Duo.png" />
-          </div>
-          <div class="slide">
-            <img
-              src="./assets/img/Fashionable Individual in Red and Black Puffer Jacket.png"
-            />
-          </div>
-          <div class="slide">
-            <img src="./assets/img/Modern Fashion Portrait.png" />
-          </div>
-        </div>
-        <div class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+      <!-- Video Header -->
+      <section class="video-header">
+        <video id="sliderVideo" autoplay loop muted playsinline>
+          <source
+            src="assets\video\video_2026-02-13_15-00-09.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-text">
+          <span class="small-text">wear your</span>
+          <span class="big-text">Darkside</span>
         </div>
       </section>
+      <!-- End Video Header -->
 
-      <!-- Cards -->
-      <section class="cards-section">
-       <div class="text-card">
-         <h3 class="section-title">New Collection</h3>
-         <p class="section-subtitle">
-           Discover our latest styles and trends crafted for you.
-         </p>
-       </div>
+      <section class="two-img">
+        <img src="assets\img\Stylish Young Man Portrait.png" />
+        <img src="assets\img\Minimalist Portrait.png" />
+      </section>
 
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="./assets/img/Fashionable Male Model in Layered Clothing.png"
-            />
-          </div>
-          <div class="card-content">
-            <h3>Classic Hoodie</h3>
-            <p>Comfortable & Stylish hoodie for daily wear.</p>
-            <button class="buy-btn">
-              <i class="fa-solid fa-cart-shopping"></i> Shop Now
-            </button>
-          </div>
+      <section class="slider">
+        <div class="slider-header">
+          <h4>Collection</h4>
+          <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="./assets/img/Vibrant Fashion Duo (1).png" />
+        <div class="slider-wrapper">
+          <button class="slider-btn prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="slider-container">
+            <div class="slider-track">
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 3"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product 4"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 5"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product 2"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 3"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product 4"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 5"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product 2"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 3"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/White_Hoodie_on_Neutral_Background-removebg-preview.png"
+                  alt="Product 4"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/img/Black_Hoodie_Against_Light_Background-removebg-preview.png"
+                  alt="Product 5"
+                  onclick="openCardPage(this.src)"
+                />
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h3>Leather Jacket</h3>
-            <p>Bold & Modern design to elevate your style.</p>
-            <button class="buy-btn">
-              <i class="fa-solid fa-cart-shopping"></i>Shop Now
-            </button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="./assets/img/Vibrant Winter Fashion.png" />
-          </div>
-          <div class="card-content">
-            <h3>Minimal Shirt</h3>
-            <p>Elegant & clean look for any occasion.</p>
-            <button class="buy-btn">
-              <i class="fa-solid fa-cart-shopping"></i> Shop Now
-            </button>
-          </div>
-        </div>
-
-
-
-              <div class="card">
-          <div class="card-img">
-            <img src="./assets/img/Vibrant Winter Fashion.png" />
-          </div>
-          <div class="card-content">
-            <h3>Minimal Shirt</h3>
-            <p>Elegant & clean look for any occasion.</p>
-            <button class="buy-btn">
-              <i class="fa-solid fa-cart-shopping"></i> Shop Now
-            </button>
-          </div>
+          <button class="slider-btn next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <img src="./assets/img/Logo 1.png" alt="DS Logo" class="footer-logo" />
+     <p class="footer-desc">
+  Where the Darkside becomes your strongest <br />
+  With refined style. Without unnecessary noise.
+</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <p>Email: contact@ds.com</p>
+        <p>Phone: +20 123 456 789</p>
+        <!-- Newsletter -->
+        <div class="newsletter">
+          <input type="email" placeholder="Enter your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
   </body>
